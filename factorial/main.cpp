@@ -36,10 +36,12 @@ int read_num(const char *str_num) {
 }
 
 int factorial(int num) {
-    if (num == 0)
-        return 1;
+    int prev = 1;
+    for (int i = 1; i < num; ++i) {
+        prev = prev * i;
+    }
 
-    return num * factorial(num-1);
+    return num * prev;
 }
 
 int main(int argc, char *argv[]) {
