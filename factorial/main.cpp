@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cstdlib>
+#include <string>
 
-char factorial(char num) {
+int factorial(int num) {
     if (num == 0)
         return 1;
 
@@ -9,6 +9,18 @@ char factorial(char num) {
 }
 
 int main(int argc, char *argv[]) {
-    std::cout << factorial(atoi(argv[1])) << "\n";
+    int num;
+    try {
+        num = std::stoi(argv[1]);
+    } catch (...) {
+        // Si el string parseado es invalido o
+        // esta fuera del rango de int, stoi() lanzara
+        // una excepcion.
+        // Para nosotros es un valor no soportado.
+        std::cerr << "Not supported.\n";
+        return -1;
+    }
+
+    std::cout << factorial(num) << "\n";
     return 0;
 }
