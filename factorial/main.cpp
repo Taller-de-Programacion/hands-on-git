@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 char factorial(char num) {
     if (num == 0)
@@ -8,6 +9,6 @@ char factorial(char num) {
 }
 
 int main(int argc, char *argv[]) {
-    std::cout << factorial(argv[1]) << "\n";
+    std::cout << factorial(atoi(argv[1])) << "\n";
     return 0;
 }
