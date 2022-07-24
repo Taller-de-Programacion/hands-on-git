@@ -11,6 +11,10 @@ int read_num(const char *str_num) {
     int num;
     size_t idx;
     try {
+        // TODO: podria ser interesante reimplementar
+        // esta conversion usando stringstream.
+        // Habria que hacer una proof-of-concept (PoC)
+        // para ver si el codigo queda mas simple.
         num = std::stoi(str_num, &idx);
     } catch (...) {
         // Si el string parseado es invalido o
