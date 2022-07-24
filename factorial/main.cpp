@@ -43,6 +43,11 @@ int factorial(int num) {
 }
 
 int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        not_supported_print();
+        return -1;
+    }
+
     int num = read_num(argv[1]);
     if (num < 0) {
         not_supported_print();
