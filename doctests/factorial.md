@@ -6,14 +6,14 @@ factorial de dicho número.
 Por ejemplo
 
 ```shell
-$ ./factorial 5
+$ ./bin/factorial 5
 120
 ```
 
 Por definición el factorial de 0 es 1
 
 ```shell
-$ ./factorial 0
+$ ./bin/factorial 0
 1
 ```
 
@@ -23,17 +23,17 @@ imaginarios u otros no esta soportado y se imprimirá un error
 por salida de error estándar.
 
 ```shell
-$ ./factorial -1
+$ ./bin/factorial -1
 Not supported.
 ```
 
 ```shell
-$ ./factorial 0.25
+$ ./bin/factorial 0.25
 Not supported.
 ```
 
 ```shell
-$ ./factorial
+$ ./bin/factorial
 Not supported.
 ```
 
