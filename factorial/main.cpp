@@ -36,6 +36,9 @@ int read_num(const char *str_num) {
 }
 
 int factorial(int num) {
+    if (num <= 1)
+        return 1;
+
     int prev = 1;
     for (int i = 1; i < num; ++i) {
         prev = prev * i;
